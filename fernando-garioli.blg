@@ -1,0 +1,24 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: fernando-garioli.aux
+A level-1 auxiliary file: resumo.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: listafiguras.aux
+A level-1 auxiliary file: listatabelas.aux
+A level-1 auxiliary file: sumario.aux
+A level-1 auxiliary file: capitulo1.aux
+A level-1 auxiliary file: capitulo2.aux
+A level-1 auxiliary file: bibliografia.aux
+The style file: abntex2-alf.bst
+Database file #1: abntex2-options.bib
+Database file #2: bibliography.bib
+Warning--entry type for "fielding2000" isn't style-file defined
+--line 83 of file bibliography.bib
+Warning--entry type for "thu2015" isn't style-file defined
+--line 135 of file bibliography.bib
+Warning--I'm ignoring thu2015's extra "year" field
+--line 143 of file bibliography.bib
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+(There were 3 warnings)
