@@ -1,9 +1,9 @@
 % ----------------------------------------------------------------------
 
-\chapter{\textbf{Referencial Teórico}} % Este comando é utilizado para criar capítulos
+\chapter{\textbf{Fundamentação Teórica}} % Este comando é utilizado para criar capítulos
 \sloppy % Corrige estouro de linhas
 
-\section{TECNOLOGIA NA EDUCAÇÃO }
+\section{TECNOLOGIA NA EDUCAÇÃO}
 
 O termo ''tecnologia'' diz respeito a muitas outras coisas além das máquinas. O conceito tecnologia engloba a criatividade engenhosa do cérebro humano desde os primórdios da Humanidade. Sua aplicação perpassa pela utilização de diversos recursos naturais, com objetivo de criar ferramentas instrumentais e simbólicas, para transpor barreiras impostas pela natureza até aos testes e aplicação de novas teorias e princípios científicos \cite{kenski2007educaccao}.
 
@@ -11,7 +11,77 @@ A sociedade contemporânea está inserida no momento de constante advento tecnoc
 
 De acordo com \citeonline{kenski2007educaccao}, a abordagem didática com integração das TIC no processo ensino-aprendizagem pode alavancar a aprendizagem e o desenvolvimento dos educandos via inserção digital. O grande desafio para escola e educadores, consiste em saber aplicar as TIC como potencializador no sistema educacional, especialmente em seus componentes pedagógicos e processos de ensino-aprendizagem \cite{libaneoorganizacao}.
 
-\section{SISTEMAS DISTRIBUÍDOS}
+\section{REDES NEURAIS ARTIFICIAIS}
+
+\subsection{CONCEITO}
+
+\citeonline{haykin2009neural} descreve o conceito de Redes Neurais Artificiais (RNA) utilizando-se do exemplo dos sistemas biológicos naturais, que possuem alta capacidade de aprendizado e conseguem assimilar informações complexas no ambiente ao redor em um curto espaço de tempo. Isto se dá pelo fato de que um computador processa informações de forma diferente de um cérebro humano, por exemplo. Neste escopo, uma rede neural objetiva o mapeamento de tais informações de forma a torná-las acessíveis para utilização, tal como afirma \citeonline[p. 28]{haykin2007redes}:
+
+\begin{citacao}
+	Uma rede neural é um processador maciçamente paralelamente distribuído constituído de unidades de processamento simples, que têm a propensão natural para armazenar conhecimento experimental e torná-lo disponível para o uso. Ela se assemelha ao cérebro em dois aspectos:
+	\begin{enumerate}[leftmargin=4.7cm, topsep=0cm]
+	    \item O conhecimento é adquirido pela rede a partir de seu ambiente através de um processo de aprendizagem.
+	    \item Forças de conexão entre neurônios, conhecidas como pesos sinápticos, são utilizadas para armazenar o conhecimento adquirido.
+	\end{enumerate}
+\end{citacao}
+
+Para \citeonline{hagan1996neural}, apesar de as as Redes Neurais não apresentarem uma solução para todos os problemas matemáticos e de engenharia, elas tem se mostrado um recurso poderoso em casos apropriados para sua aplicação. Muitos dos seus avanços atuais se devem ao avanço do poder de processamento dos computadores, o que possibilita a realização de testes cada vez mais complexos.
+
+\subsection{MODELO DE ORGANIZAÇÃO}
+
+Considerando o modelo de organização de uma Rede Neural Artificial (RNA), existem duas características básicas que a definem, sendo estas sua arquitetura e seu modelo de aprendizagem. Para que uma RNA funcione, se faz necessário um treinamento prévio através de dados de exemplo fornecidos, que serão levados como parâmetro para uma classificação de resultados. Neste sentido, através dos parâmetros obtidos, são atribuídos pesos para cada tipo de informação de entrada a ser processada pela rede \cite{thomas2019}.
+
+O neurônio artificial, definido por \citeonline{mcculloch1943logical}, representa uma unidade de processamento de uma RNA, sendo de considerada de importância fundamental para o funcionamento da rede \cite{haykin2007redes}. A primeira aplicação prática de um neurônio artificial foi concebida por \citeonline{rosenblatt1958perceptron} com a rede \textit{perceptron}, capaz de realizar reconhecimento de padrões.
+
+\begin{figure}[h]
+	\caption{Modelo de neurônio artificial de McCulloch e Pitts.}
+	\caption*{Fonte: \citeonline{thomas2019}.}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=14cm]{resources/modelo_neuronio.png} % leia abaixo
+	\label{figura:modelo_neuronio}	
+\end{figure}
+
+A figura \ref{figura:modelo_neuronio} representa o modelo de um neurônio artificial, constituído de entradas predefinidas (x\textsubscript{1}, x\textsubscript{2}, x\textsubscript{D}), que têm o seu valor multiplicado por um peso (w\textsubscript{1}, w\textsubscript{2}, w\textsubscript{D}), indicando o grau de importância da respectiva entrada. Tais valores são somados através de uma combinação linear e encaminhados em seguida para uma função de ativação. A partir de então, é verificado se o valor produzido pela função atinge um limiar \(\mu\). Caso o resultado ultrapasse o limiar definido, o neurônio produz uma saída positiva \cite{thomas2019}.
+
+\subsection{SINGLE LAYER PERCEPTRON X MULTILAYER PERCEPTRON}
+
+Quanto a organização de uma Rede Neural Artificial, \citeonline{fausett1994fundamentals} descreve os arranjos de RNA's em camadas. Uma RNA com apenas uma camada é denominada uma \textit{Single Layer Perceptron}, ao passo que uma RNA com múltiplas camadas é denominada uma \textit{Multilayer Perceptron}.
+
+\newpage
+
+\begin{figure}[h]
+	\caption{Exemplo de separação linear binária.}
+	\caption*{Fonte: \citeonline{2015_singlelayer}.}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=14cm]{resources/perceptron_binary.png} % leia abaixo
+	\label{figura:perceptron_binary}	
+\end{figure}
+
+O uso de RNA's do tipo \textit{Single Layer Perceptron} se remete a problemas de ordem linear \cite{haykin2009neural}, como apresenta a figura \ref{figura:perceptron_binary}, onde duas classes de informações (+ e -), podem ser separadas por uma única reta. Tais problemas permitem a classificação de dados de entrada em até duas categorias, limitando sua aplicação à problemas mais complexos, o que pode exigir aplicação de uma rede multicamada (\textit{Multilayer Perceptron}) \cite{fausett1994fundamentals}.
+
+Em uma rede Multilayer Perceptron, tal como representado na figura \ref{figura:multilayer_perceptron}, o emprego de várias camadas é utilizado para possibilitar a separação de elementos que uma rede Single Layer Perceptron não é capaz de realizar. Neste modelo, os perceptrons utilizam-se de funções de ativação não-lineares, que tornam possível tal refinamento no processo \cite{marius2009}.
+
+\begin{figure}[h]
+	\caption{Exemplo de separação linear não-binária.}
+	\caption*{Fonte: .}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=12cm]{resources/multilayer_perceptron.png} % leia abaixo
+	\label{figura:multilayer_perceptron}	
+\end{figure}
+
+\newpage
+
+\subsection{APRENDIZAGEM SUPERVISIONADA}
+
+Quanto ao processo de aprendizagem de uma RNA, os métodos de aprendizagem podem ser classificados como supervisionados e não-supervisionados \cite{haykin2007redes}. Na ocasião do procedimento supervisionado, há um ambiente de treinamento contendo modelos de saída já conhecidos e classificados, utilizados como parâmetro para classificação \cite{marius2009}.
+
+\citeonline{2015_singlelayer} exemplifica a aprendizagem supervisionada descrevendo um sistema de filtragem de \textit{spam}, no qual ao visualizar um \textit{e-mail} uma pessoa saberia identificá-lo como uma mensagem de lixo eletrônico. A partir de então, seria possível reunir informações características de mensagens do mesmo tipo para classificar outras mensagens ainda não visualizadas.
+
+Em RNA's com modelo de aprendizagem não-supervisionado, ao contrário do modelo supervisionado, não são utilizados modelos explícitos de saída para o treinamento, e nenhuma avaliação da mesma é realizada \cite{von2005rede}. Neste caso, a própria rede deve identificar os modelos de aprendizagem e criar novos, caso necessário \cite{becker1991}.
+
+\section{TECNOLOGIAS EMPREGADAS}
+
+\subsection{SISTEMAS DISTRIBUÍDOS}
 
 Na computação moderna vários sistemas computacionais interagem entre si de forma interdependente, sendo a internet o exemplo mais perceptível a ser citado. São várias redes interconectadas e aplicações que fazem uso de tais estruturas para se comunicarem, abrangendo os mais variados domínios. Todas essas estruturas empregam conceitos da tecnologia sistemas distribuídos \cite{puder2011distributed}.\\
 \citeonline{tanenbaum2007distributed} descrevem um sistema distribuído como sendo um conjunto de computadores autônomos não obrigatoriamente equivalentes, interligados entre si e compreendidos pelo usuário como um único sistema conexo. Sua compreensão destaca a interdependência e a colaboração entre os computadores como sendo um elemento de suma importância para a existência da arquitetura. A definição proposta por \citeonline[p. 2]{coulouris2005distributed} torna ainda mais precisa através da seguinte definição sobre sistemas distribuídos:
@@ -22,31 +92,30 @@ Na computação moderna vários sistemas computacionais interagem entre si de fo
 
 \citeonline{puder2011distributed} destacam vários benefícios dos sistemas distribuídos em comparação com sistemas centralizados, tais como redundância, economia, escalabilidade e tolerância a falhas.
 
-\section{WEB SERVICES}
+\subsection{WEB SERVICES}
 
-Considerando as várias utilidades dos sistemas distribuídos, \citeonline{fielding2000} definiu em sua tese de doutorado o REpresentational State Transfer (REST),  um estilo arquitetônico para sistemas hipermídia distribuídos. Tal arquitetura foi desenvolvida com base na disponibilização de recursos, mapeados de forma exclusiva através de URIs (Uniform Resource Identifiers), que são acessadas através de URLs (Uniform Resource Location), funcionando sobre o protocolo HTTP \cite{richardson2008restful}. Em seu trabalho, Fielding destaca seis atribuições básicas que caracterizam o padrão REST, são estas:
+Considerando as várias utilidades dos sistemas distribuídos, \citeonline{fielding2000} definiu em sua tese de doutorado o \textit{REpresentational State Transfer} (REST), um estilo arquitetônico para sistemas hipermídia distribuídos. Tal arquitetura foi desenvolvida com base na disponibilização de recursos, mapeados de forma exclusiva através de URIs (\textit{Uniform Resource Identifiers}), que são acessadas através de URLs (\textit{Uniform Resource Location}), funcionando sobre o protocolo HTTP \cite{richardson2008restful}. Em seu trabalho, Fielding destaca seis atribuições básicas que caracterizam o padrão REST, são estas:
 
 \begin{enumerate}
 	\item {A aplicação deve utilizar a arquitetura cliente-servidor;}
-	\item {Todas as requisições devem ser independentes e isoladas entre si, não havendo nenhum estado de sessão guardado no servidor (Stateless);}
+	\item {Todas as requisições devem ser independentes e isoladas entre si, não havendo nenhum estado de sessão guardado no servidor (\textit{Stateless});}
 	\item {Requisições já executadas previamente podem ser mantidas em memória para reutilização futura por chamadas equivalentes (Cache);}
 	\item {Deve existir uma padronização na manipulação, no mapeamento dos componentes disponibilizados e no formato de troca de dados (Interface Uniforme);}
 	\item {O sistema deve ser projetado em camadas, de modo que a interação entre componentes de diferentes camadas seja limitada ao essencial;}
-	\item {Código sob demanda, permitindo que applets ou scripts sejam baixados para execução no lado cliente (podendo ser opcional a implementação deste quesito);}
+	\item {Código sob demanda, permitindo que \textit{applets} ou \textit{scripts} sejam baixados para execução no lado cliente (podendo ser opcional a implementação deste quesito);}
 \end{enumerate}
 
-O padrão definido por Fielding se mostra uma alternativa altamente performática em comparação com webservices tradicionais tais como SOAP, principalmente pelo tamanho de mensagens e tempos de resposta menores, tal como afirmam \citeonline{hamad2010} e \citeonline{dudhe2014performance}. A comunidade web e grandes empresas tais como Google e Amazon têm se utilizado dessa tecnologia para construir seus serviços, dado sua simplicidade e escalabilidade \cite{wagh2014hybrid}. REST tem sido amplamente utilizado em conjunto com o JavaScript Object Notation (JSON), uma estrutura de dados simples e leve, em substituição ao formato XML como padrão representativo de troca de dados, sendo suportado pela maioria dos Web Browsers atuais \cite{knutsen2018}.
+O padrão definido por Fielding se mostra uma alternativa altamente performática em comparação com  \textit{web services} tradicionais tais como SOAP, principalmente pelo tamanho de mensagens e tempos de resposta menores, tal como afirmam \citeonline{hamad2010} e \citeonline{dudhe2014performance}. A comunidade web e grandes empresas tais como Google e Amazon têm se utilizado dessa tecnologia para construir seus serviços, dado sua simplicidade e escalabilidade \cite{wagh2014hybrid}. REST tem sido amplamente utilizado em conjunto com o \textit{JavaScript Object Notation} (JSON), uma estrutura de dados simples e leve, em substituição ao formato XML como padrão representativo de troca de dados, sendo suportado pela maioria dos \textit{Web Browsers} atuais \cite{knutsen2018}.
 
 \begin{figure}[h]
-	\caption{Arquitetura de um Web Service RESTful.}
+	\caption{Arquitetura de um \textit{Web Service RESTful}.}
 	\caption*{Fonte: \citeonline{thu2015}.}
 	\centering % para centralizarmos a figura
 	\includegraphics[width=12cm]{resources/webservices.png} % leia abaixo
 	\label{figura:webservices}	
 \end{figure}
 
-\pagebreak
-A figura \ref{figura:webservices} ilustra uma representação básica de um webservice implementado utilizando a arquitetura Rest (RESTful), onde essencialmente são realizadas requisições (HTTP Request) a partir de um determinado cliente (aplicação ou web browser) para um servidor (REST Server), que responde à solicitação com uma resposta (HTTP Response), contendo em seu corpo uma informação padronizada por algum formato representativo de troca de dados (XML, JSON, HTML, TEXT).
+A figura \ref{figura:webservices} ilustra uma representação básica de um \textit{Web Service RESTful} implementado utilizando a arquitetura Rest (RESTful), onde essencialmente são realizadas requisições (HTTP Request) a partir de um determinado cliente (aplicação ou \textit{web browser}) para um servidor (\textit{REST Server}), que responde à solicitação com uma resposta (HTTP Response), contendo em seu corpo uma informação padronizada por algum formato representativo de troca de dados (XML, JSON, HTML, TEXT).
 
 \begin{table}[h]
 	\captionsetup{justification=centering}
@@ -66,9 +135,9 @@ A figura \ref{figura:webservices} ilustra uma representação básica de um webs
 
 Aplicações RESTful utilizam-se dos chamados métodos HTTP para manipulação de dados. A tabela \ref{tabela:metodoshttp} lista os principais métodos e suas respectivas ações, sendo elas leitura, criação, alteração e deleção de dados, respectivamente \cite{pautasso2008restful}.
 
-\section{JSON WEB TOKEN (JWT)}
+\subsection{JSON WEB TOKEN (JWT)}
 
-Quanto à segurança de acesso, web services RESTful podem utilizar mecanismos para garantir que somente usuários autorizados tenham acesso aos recursos. Neste sentido, o padrão JWT (JSON Web Token) \cite{jwt} se mostra uma alternativa concreta para a transmissão de informações confidenciais de autenticação em sistemas stateless \cite{jones2015json}. \citeonline{peyrott2016jwt} descreve tal padrão como um meio simples, compacto e seguro de realizar solicitações, sendo utilizado por uma grande parcela de aplicativos.
+Quanto à segurança de acesso, \textit{web services} RESTful podem se utilizar de mecanismos para garantir que somente usuários autorizados tenham acesso aos recursos. Neste sentido, o padrão JWT (\textit{JSON Web Token}) \cite{jwt} se mostra uma alternativa concreta para a transmissão de informações confidenciais de autenticação em sistemas \textit{stateless} \cite{jones2015json}. \citeonline{peyrott2016jwt} descreve tal padrão como um meio simples, compacto e seguro de realizar solicitações, sendo utilizado por uma grande parcela de aplicativos. O fato de se utilizar da estrutura JSON se deve a sua ampla adoção pelos  navegadores web modernos \cite{jones2011emerging}.
 
 \begin{figure}[h]
 	\caption{Estrutura básica de um token JWT.}
@@ -80,11 +149,17 @@ Quanto à segurança de acesso, web services RESTful podem utilizar mecanismos p
 	\end{center}
 \end{figure}
 
-A figura \ref{figura:jwt} ilustra a estrutura básica do JWT, constituída basicamente por uma string de caracteres criptografada denominada Token, dividida em três seções: header, payload e signature.
+A figura \ref{figura:jwt} ilustra a estrutura básica do JWT, constituída basicamente por uma string de caracteres criptografada denominada Token, dividida em três seções: \textit{header}, \textit{payload} e \textit{signature}.
 
-\section{REDES NEURAIS}
+\citeonline{janoky2018} ressaltam algumas vantagens da utilização de \textit{tokens} JWT, justificando seu uso como forma de controle de acesso a determinadas funções em um sistema distribuído. Destacam-se dentre estas a diminuição da complexidade na utilização do serviço, e o ganho em performance, dado que todas as informações de autenticação e autorização do usuário são inseridas junto ao \textit{token}, o que dispensa a realização de uma chamada ao \textit{web service} para verificar se o usuário logado possui ou não permissão de acesso à uma determinada função.
 
-\citeonline{haykin2009neural} descreve o conceito de Redes Neurais utilizando-se do exemplo dos sistemas biológicos naturais, que possuem alta capacidade de aprendizado e conseguem assimilar informações complexas no ambiente ao redor em um curto espaço de tempo. Isto se dá pelo fato de que um computador processa informações de forma diferente de um cérebro humano, por exemplo. Neste escopo, uma rede neural objetiva o mapeamento de tais informações de forma a torná-las acessíveis para utilização.
+\begin{figure}[h]
+	\caption{Diagrama de autenticação e validação de \textit{token}.}
+	\caption*{Fonte: \citeonline{montanheiro2017utilizaccao}.}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=14cm]{resources/jwt-schema.png} % leia abaixo
+	\label{figura:jwt-schema}	
+\end{figure}
 
-Para \citeonline{hagan1996neural}, apesar de as as Redes Neurais não apresentarem uma solução para todos os problemas matemáticos e de engenharia, elas tem se mostrado um recurso poderoso em casos apropriados para sua aplicação. Muitos dos seus avanços atuais se devem ao avanço do poder de processamento dos computadores, o que possibilita a realização de testes cada vez mais complexos.
+Na figura \ref{figura:jwt-schema} temos um esquema básico de autenticação e validação de um \textit{token} JWT onde, na fase de autenticação, são encaminhados os dados de login do usuário para o servidor. Caso a validação tenha ocorrido com sucesso, um \textit{token} é gerado e retornado para a aplicação cliente (\textit{Browser} ou Aplicativo), que pode acessar recursos permitidos enquanto o mesmo estiver válido.
 
