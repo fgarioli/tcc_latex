@@ -1,6 +1,6 @@
 \documentclass[arial,english,brazil,oneside]{estilo/estilo_ifes}
 
-\usepackage[alf]{abntex2cite}
+\usepackage[alf, abnt-etal-text=it]{abntex2cite}
 \usepackage[utf8]{inputenc}
 \usepackage{lastpage}           % Usado pelo exemplo de ficha catalográfica
 \usepackage{microtype}          % para melhorias de justificação
@@ -14,13 +14,16 @@
 \usepackage{setspace}
 \usepackage{quoting}
 \usepackage{setspace}% http://ctan.org/pkg/{setspace,lipsum}
+\usepackage{pdfpages}
 \usepackage{color, graphicx}
-\usepackage[T1]{fontenc}
-\usepackage[brazil]{babel}
-\usepackage{caption} % Pacote para formatar legendas das figuras e tabelas
 \usepackage{url}
 \usepackage{enumitem}
+\usepackage{fancybox}
 \usepackage[justification=centering]{caption}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+
+\pagenumbering{arabic}
 
 %\setlist{parsep=\parskip,leftmargin=1.5cm}
 \renewcommand{\baselinestretch}{1.5}
@@ -95,7 +98,7 @@
 
 \mainmatter
 
-\include{1-Introcucao}
+\include{1-Introducao}
 \include{2-Referencial}
 \include{3-Metodologia}
 \include{4-Resultados}

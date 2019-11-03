@@ -256,6 +256,8 @@
 }
 
 
+
+
 %%% Redefinição do comando de impressão da folha de rosto.
 %%% Para esta parte do código é necessário que o caracter arroba `@'
 %%% seja tratado como uma letra pelo LaTeX.
@@ -269,6 +271,7 @@
     {\ABNTEXchapterfont\ABNTEXchapterfontsize\MakeTextUppercase{\imprimirtitulo}}\\
     %
     \vspace{\fill}
+    \thispagestyle{empty}
     %
     \abntex@ifnotempty{\imprimirpreambulo}{%
       \hspace{.45\textwidth}
@@ -302,11 +305,13 @@
 %%% Declaração do Autor
 \newenvironment{declaracaodoautor}[1][\declaracaodoautorname]{%
   \pretextualchapter{#1}
+  \thispagestyle{empty}
 }{\PRIVATEclearpageifneeded}
 % ---
 
 %%% Configura o pacote hyperref
 \makeatletter
+
 \hypersetup{
   pdftitle={\@title},
   pdfauthor={\@author},
@@ -317,6 +322,14 @@
 }
 \makeatother
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \endinput
 
