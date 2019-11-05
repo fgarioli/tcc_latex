@@ -16,13 +16,25 @@ O progresso da tecnologia tem condicionado recursos cada vez mais ágeis e inter
 
 Através disso, podemos destacar a relevância das tecnologias móveis como um elemento de suma importância neste contexto, viabilizando acesso ilimitado e instantâneo à informação. \citeonline{qi2012research} elencam a tamanha aceitação desta tecnologia e o quanto ela se faz presente na vida de milhares de pessoas, substituindo os computadores pessoais como o principal meio de acesso à internet e como forma de trabalho.
 
-O trabalho em questão se insere neste meio, propondo o desenvolvimento de um aplicativo móvel que atue como facilitador na relação entre alunos, pais e escola, objetivando um maior comprometimento das partes no processo de aprendizagem. Dentre suas principais funções podemos destacar:
+O trabalho em questão se insere neste meio, propondo o desenvolvimento de um aplicativo móvel que atue como facilitador na relação entre alunos, pais e escola, objetivando um maior comprometimento das partes no processo de aprendizagem. Conjuntamente, é proposto a elaboração de um módulo baseado em redes neurais que, com base na análise dos dados dos alunos, mostrará uma sugestão quanto à aptidão de um aluno, levando em conta as áreas de conhecimento definidas pelo Novo Ensino Médio.
+
+Dentre as principais funcionalidades do aplicativo, compreendem:
 \begin{itemize}
-	\item Disponibilização de dados acadêmicos em tempo real;
-	\item Visualização de mensagens da escola e dos professores;
-	\item Visualização de tarefas e conteúdos de aulas;
-	\item Acompanhamento da frequência e das notas do aluno;
-	\item Fornecimento de um ambiente interativo auxiliar para a gestão da vida acadêmica;
+	\item a disponibilização de dados acadêmicos em tempo real, tais como grade horária de aulas, registro de atividades, conteúdos ministrados, frequência e notas;
+	\item a visualização do calendário acadêmico;
+	\item a visualização de mensagens da escola e dos professores;
 \end{itemize}
 
-Neste sentido, propõe-se conjuntamente a utilização de dados dos alunos para uma análise de padrões, de forma a gerar informações auxiliares para alunos e pais. Tal análise se utilizará dos recursos de redes neurais para apontar possíveis fatores capazes de contribuir para o aprendizado do aluno. Deste modo, serão selecionados, com o auxílio de um pedagogo através de coorientação,  parâmetros iniciais básicos, que assistirão ao treinamento da rede proposta, que ocorrerá em seguida.
+\subsection{OBJETIVOS}
+
+\subsubsection{Geral}
+
+Elaborar um aplicativo mobile para a promoção de integração de pais, alunos e escola no contexto educacional, permitindo a visualização de dados acadêmicos em tempo real;
+
+\subsubsection{Específicos}
+
+\begin{enumerate}
+	\item Elaborar e implantar um web service que irá buscar informações dos alunos em uma base de dados;
+	\item Elaborar um aplicativo mobile que utilize os dados fornecidos através do web service;
+	\item Elaborar um módulo de redes neurais para recomendação da aptidão do aluno com base nas áreas de conhecimento do Novo Ensino Médio;
+\end{enumerate}

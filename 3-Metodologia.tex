@@ -1,7 +1,7 @@
 \chapter{\textbf{Metodologia de Pesquisa}} % Este comando é utilizado para criar capítulos
 \sloppy % Corrige estouro de linhas
 
-\section{Aplicativo Mobile}
+\section{Aplicativo}
 
 O escopo da aplicação foi definido para contemplar uma base de dados já existente de um sistema de gerenciamento escolar já implantado em um município, o qual cedeu o acesso à mesma para utilização na construção do software. Após a construção, o software ficará disponível para utilização por parte da população do município, bem como toda a sua codificação.
 
@@ -12,7 +12,8 @@ Para a construção do mesmo, foi utilizado como referência de metodologia de d
 	\centering % para centralizarmos a figura
 	\includegraphics[width=16cm]{resources/pds_rup.png} % leia abaixo
 	\label{figura:rup}
-	\caption*{Fonte: \citeonline{rupLes}.}
+	\captionsetup{singlelinecheck = false, format= hang, justification=raggedright, labelsep=space, width=16cm}
+	\caption*{\footnotesize Fonte: \citeonline{rupLes}.}
 \end{figure}
 
 Para tal, os seguintes passos descritos no modelo (figura \ref{figura:rup}) foram executados para a elaboração do \textit{sofware}:
@@ -29,35 +30,26 @@ Para tal, os seguintes passos descritos no modelo (figura \ref{figura:rup}) fora
    \item Implantar: gerar o arquivo instalável do aplicativo (APK) e instalar o \textit{webservice} no servidor de produção;
 \end{enumerate}
 
-Toda a aplicação foi construída baseado na arquitetura REST \cite{fielding2000}, seguindo a estrutura representada na figura \ref{figura:arqu_basica}. Neste modelo, é construído uma API REST que busca as informações referentes aos alunos na base de dados, trata os mesmos, e retorna no formato JSON para a aplicação instalada nos \textit{smartphones}, que poderão utilizar tanto o sistema Android, quanto IOS.
-
-\begin{figure}[H]
-	\caption{Arquitetura básica da Aplicação.}
-	\centering % para centralizarmos a figura
-	\includegraphics[width=12cm]{resources/esquema_web_service.png} % leia abaixo
-	\label{figura:arqu_basica}
-	\caption*{Fonte: O Autor.}
-\end{figure}
-
 \section{Módulo de Recomendação baseado em Redes Neurais}
 
-Considerando as áreas do Novo Ensino Médio \cite{lei13415}, foi realizado a construção de um módulo de visualização aptidão do aluno, com base nas áreas do Novo Ensino Médio. Para tanto, foram realizadas as seguintes etapas no processo de desenvolvimento:
+Considerando as áreas de conhecimento definidas pelo Novo Ensino Médio \cite{lei13415}, foi realizado a construção de um módulo de recomendação aptidão do aluno. Para tanto, foram realizadas as seguintes etapas no processo de desenvolvimento:
 
 \begin{enumerate}
    \item Selecionar variáveis para o treinamento da rede;
    \item Preparar o arquivo de treinamento com base nas variáveis escolhidas;
-   \item Realizar o treinamento;
+   \item Realizar o treinamento da rede;
    \item Implementar o módulo junto ao web service do aplicativo;
 \end{enumerate}
 
-Para a construção do módulo de recomendação do aplicativo foi utilizado a biblioteca Weka para realizar o treinamento da rede e extrair os resultados do mesmo. Para tanto, a biblioteca utiliza um arquivo do tipo ARFF para descrever os os atributos, as possibilidades de classificação e os respectivos exemplos de classificação utilizados no treinamento em questão. Sua estrutura básica é representada na figura \ref{figura:arff}.
+Para a construção do módulo de recomendação do aplicativo foi utilizado a biblioteca Weka para realizar o treinamento da rede e extrair os resultados do mesmo. Para tanto, a biblioteca utiliza um arquivo do tipo ARFF para descrever os os atributos, as possibilidades de classificação, e os respectivos exemplos de classificação utilizados no treinamento em questão. Sua estrutura básica é representada na figura \ref{figura:arff}.
 
 \begin{figure}[H]
 	\caption{Sintaxe básica de um arquivo de treinamento utilizado pelo Weka.}
 	\centering % para centralizarmos a figura
 	\includegraphics[width=12cm]{resources/arff.png} % leia abaixo
-	\label{figura:arff}	
-	\caption*{Fonte: O Autor.}
+	\label{figura:arff}
+	\captionsetup{singlelinecheck = false, format= hang, justification=raggedright, labelsep=space, width=12cm}
+	\caption*{\footnotesize Fonte: O Autor.}
 \end{figure}
 
 \section{Ambiente de desenvolvimento}
@@ -65,7 +57,6 @@ Para a construção do módulo de recomendação do aplicativo foi utilizado a b
 As seguintes ferramentas e \textit{softwares} foram utilizados no processo de desenvolvimento:
 
 \begin{itemize}
-    \item Banco de Dados Oracle (versão 11g);
     \item Java SE \textit{Development Kit} (versão 8 update 221);
     \item Ionic \textit{Framework} (versão 4);
     \item Servidor Web Payara (versão 5.191);
@@ -73,3 +64,16 @@ As seguintes ferramentas e \textit{softwares} foram utilizados no processo de de
     \item Visual Studio Code (versão 1.39.1);
     \item Postman (versão 7.2);
 \end{itemize}
+
+\section{Arquitetura da Aplicação}
+
+Toda a aplicação foi construída baseado na arquitetura REST \cite{fielding2000}, seguindo a estrutura representada na figura \ref{figura:arqu_basica}. Neste modelo, é construído uma API REST que busca as informações referentes aos alunos na base de dados, trata os mesmos, e retorna no formato JSON para a aplicação instalada nos \textit{smartphones}, que poderão utilizar tanto o sistema Android, quanto IOS.
+
+\begin{figure}[H]
+	\caption{Arquitetura básica da Aplicação.}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=12cm]{resources/esquema_web_service.png} % leia abaixo
+	\label{figura:arqu_basica}
+	\captionsetup{singlelinecheck = false, format= hang, justification=raggedright, labelsep=space, width=12cm}
+	\caption*{\footnotesize Fonte: O Autor.}
+\end{figure}
