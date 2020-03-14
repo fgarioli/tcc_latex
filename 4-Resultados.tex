@@ -28,7 +28,7 @@ Nesta etapa foi produzido o documento de requisitos. Ao todo, foram identificado
 
 \subsection{Organizar Requisitos}
 
-Nesta etapa, os requisitos forma organizados entre as categorias: processos de negócios e listagens/relatórios.
+Nesta etapa, os requisitos foram organizados entre as categorias: processos de negócios e listagens/relatórios.
 
 Os requisitos de processos de negócio foram, respectivamente: entrar no sistema; sair do sistema; enviar cliques do responsável; listar horários de aula por id do aluno; listar atividades avaliativas por id do aluno, período e trimestre; listar disciplinas de atividades avaliativas por id do aluno e período; listar boletim por id do aluno e período; listar frequências por id do aluno, id da disciplina e período; selecionar aluno por id; listar alunos por responsável e ano letivo; listar calendário acadêmico; listar mensagens por usuário.
 
@@ -278,13 +278,13 @@ Foram realizados testes de validação \cite{pressman2016engenharia} no aplicati
 
 A implantação do \textit{web service} foi realizada na infraestrutura da empresa parceira, utilizando o servidor \textit{Payara Web Server} na versão 1.192. A publicação do aplicativo foi realizada através da conta da empresa parceira na loja de aplicativos da plataforma \textit{Android}. A publicação para a plataforma \textit{IOS} já se encontra em processo de andamento.
 
-\section{Módulo de Recomendação baseado em Redes Neurais}
+\section{Módulo de classificação baseado em Redes Neurais}
 
 A Implementação do módulo baseado em redes neurais foi implementada utilizando a biblioteca \textit{Weka}, na versão 3.8.3. Para tal, foram executados os seguintes passos no processo de construção:
 
 \subsection{Selecionar variáveis para o treinamento da rede}
 
-Nesta etapa foi realizada, sob auxílio de um pedagogo, dentre um conjunto de quarenta variáveis disponíveis na base de dados cedida, a seleção de dezenove variáveis para a realização do treinamento da rede. As variáveis selecionadas estão dispostas a seguir, conforme mostra tabela \ref{tabela:variaveis}.
+Nesta etapa foi realizada, sob auxílio de um pedagogo, dentre um conjunto de quarenta variáveis disponíveis na base de dados cedida, a seleção de dezenove variáveis para a realização do treinamento da rede. Durante o processo, foram realizadas 2 reuniões com o pedagogo. As variáveis selecionadas estão dispostas a seguir, conforme mostra tabela \ref{tabela:variaveis}. 
 
 \begin{table}[H]
     \small
@@ -400,7 +400,7 @@ Foram testadas configurações com uma, duas e três camadas escondidas, buscand
 
 \subsection{Integrar o módulo junto ao web service e ao aplicativo}
 
-Nesta fase foi realizado a integração da rede treinada com o \textit{web service}, através da incorporação ao projeto do \textit{Weka} como biblioteca, do arquivo de treinamento, e das configurações de treinamento. O mapeamento do serviço responsável por esta funcionalidade é representado pela tabela \ref{tabela:webservice_treinamento}. O resultado gerado pelo serviço fornece uma distribuição de porcentagem entre as áreas de conhecimento, sendo utilizada pelo aplicativo na geração de um gráfico indicativo, que apresenta uma porcentagem para cada área de conhecimento do novo ensino médio, tal como mostra a figura \ref{figura:distribuicao}.
+Nesta fase foi realizada a integração da rede treinada com o \textit{web service}, através da incorporação ao projeto do \textit{Weka} como biblioteca, do arquivo de treinamento, e das configurações de treinamento. O mapeamento do serviço responsável por esta funcionalidade é representado pela tabela \ref{tabela:webservice_treinamento}. O resultado gerado pelo serviço fornece uma distribuição de porcentagem entre as áreas de conhecimento, sendo utilizada pelo aplicativo na geração de um gráfico indicativo, que apresenta uma porcentagem para cada área de conhecimento do novo ensino médio, tal como mostra a figura \ref{figura:distribuicao}.
 
 \begin{table}[H]
     \small
